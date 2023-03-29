@@ -1,0 +1,145 @@
+/*Posicion y tipo de letra de todo el body*/
+
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 13px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*Fondo del formulario*/
+
+.contenedor {
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(rgba(0, 80, 212, 0.5),rgba(177, 59, 59, 0.5)), url(Fondo2.jpg);
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+}
+
+/*Botones de inicio sesion y registrar del formulario*/
+
+button.button-box {
+    padding: 5px;
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    background: linear-gradient(to left, transparent 50%, #9e6981 50%);
+    background-size: 200%;
+    background-position: right;
+    transition: background-position 0.3s;
+    border-radius: 15px;  
+}
+
+/*Animacion del boton inicio sesion y registrar*/
+
+.button-box:hover{
+    background-position: left;
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+}
+
+/*Centrado de los botones inicio sesion y registrar orizontal */
+
+#elegir{
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    place-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 12px;
+}
+
+
+/*Para que se ve el rectangulo que contiene el formulario*/
+.rectangulo {
+    width: 380px;
+    height: 550px;
+    position: relative;
+    margin: 6% auto;
+    background: #ffff;
+    padding: 5px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/*Centrar los botones inicio sesion y registrar vertical al centro quitandole los bordes*/
+
+.posicion {
+    margin-top: 50px;
+    cursor: pointer;
+    background: transparent;
+    border: 0px;
+    outline: none;
+    position: relative;
+}
+
+/*Poner formulario registrar en paralelo al de iniciar sesion*/
+
+.formulario {
+    top: 140px;
+    position: absolute;
+    width: 280px;
+    transition: 0.3s;
+}
+
+/*Estilo de las celdas de informacion*/
+
+.relleno {
+    width: 100%;
+    padding: 10px 0;
+    margin: 5px 0;
+    border-left: 0;
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 2px solid #9e6981;
+    outline: none;
+    background: transparent;
+}
+
+/*Estilo del boton Acceder */
+
+.submit {
+    width: 86%;
+    cursor: pointer;
+    display: block;
+    margin: auto;
+    padding: 5px;
+    font-size: 22px;
+    background: rgb(204,204,204);
+    background: radial-gradient(circle, rgba(204,204,204,1) 51%, rgba(204,204,204,1) 100%);
+    border-radius: 15px;
+    border: none;
+    zoom: 1;
+}
+
+/*Color y animaciones al pasar por encima*/
+
+.submit:hover{
+    background: rgb(158,105,129);
+    background: radial-gradient(circle, rgba(158,105,129,1) 51%, rgba(158,105,129,1) 100%);
+    color: white;
+    font-weight: 700;
+    zoom:1.2;
+}
+
+/*Margen para la el boton Acceder*/
+
+.condicion{
+    margin: 30px 10px 30px 0;
+    
+}
+
+/*Posicion centrada para iniciar sesion*/
+
+#login{
+    left: 50px;
+}
+
+/*Posicion a la derecha formulario registrar*/
+
+#registrar {
+    left: 450px;
+}

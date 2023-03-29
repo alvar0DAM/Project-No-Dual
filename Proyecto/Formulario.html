@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Registro</title>
+</head>
+<body>
+    <div class="contenedor">
+        <div class="rectangulo">
+            <div id="elegir">
+                <button type="button" class="posicion button-box" onclick="login()">Iniciar Sesión</button>
+                <button type="button" class="posicion button-box" onclick="registrar()">Registrar</button>
+                </div>
+            <form id="login" class="formulario" method="post" action="http://localhost/Proyecto/procesarFormulario.php">
+                <input type="hidden" name="login"> <!--input necesario para php-->
+                <input type="text" class="relleno" name="usuario" placeholder="Nombre de Usuario" required>
+                <input type="password" class="relleno" name="contraseña" placeholder="Contraseña" required>
+                <p><input type="checkbox" class="condicion">Recordar Contraseña.</p>
+                <button type="submit" class="submit">Acceder</button>
+            </form>
+            <form id="registrar" class="formulario" method="post" action="http://localhost/Proyecto/procesarFormulario.php">
+                <input type="hidden" name="registro"> <!--input necesario para php-->
+                <input type="text" class="relleno" name="nombre" placeholder="Nombre" minlength="3" maxlength="20" pattern="[a-zA-Z]+" required>
+                <input type="text" class="relleno" name="apellido"  placeholder="Apellido" minlength="5" maxlength="40" pattern="[a-zA-Z]+" required>
+                <input type="text" class="relleno" name="usuario"  placeholder="Nombre de Usuario" required>
+                <input type="email" class="relleno" name="correo"  placeholder="Correo" required>
+                <input type="text" class="relleno" name="telefono"  placeholder="Teléfono" pattern="[0-9]{9}" required>
+                <input type="password" class="relleno" name="contraseña"  placeholder="Contraseña" required>
+                <p><input type="checkbox" class="condicion">Acepto los términos y condiciones.</p>
+                <button type="submit" class="submit">Enviar</button>
+            </form>
+        </div>
+    </div>
+    <script>
+        var x = document.getElementById("login");
+        var y = document.getElementById("registrar");
+        var z = document.getElementById("elegir");
+
+        function login() {
+            x.style.left = "50px";
+            y.style.left = "450px";
+            z.style.left = "0px";
+        }
+
+        function registrar() {
+            x.style.left = "-400px";
+            y.style.left = "50px";
+            z.style.left = "0px";
+        }
+    </script>
+</body>
+</html>
